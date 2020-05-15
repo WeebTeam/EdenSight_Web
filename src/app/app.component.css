@@ -1,0 +1,31 @@
+body, .container{
+	height: 100vh;
+}
+
+body{
+	background-color: #bfefaf;
+	background-image: url(../assets/bg.gif)
+}
+
+.logo, .login{
+	height: 350px;
+}
+
+.logo{
+	background-image: url(../assets/eden-logo.png);
+	background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.login h1, .form{
+	margin: 20px 0;
+}
+
+.backside{
+	padding: 10%;
+	background-color: white;
+	border-radius: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	width: 100%;
+}
