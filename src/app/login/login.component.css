@@ -1,0 +1,22 @@
+.logo, .login{
+	height: 350px;
+}
+
+.logo{
+	background-image: url(../../assets/eden-logo.png);
+	background-position: center; 
+  	background-repeat: no-repeat;
+}
+
+.login h1, .form{
+	margin: 20px 0;
+}
+
+.backside{
+	padding: 10%;
+	background-color: white;
+	border-radius: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	width: 100%;
+}
