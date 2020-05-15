@@ -8,7 +8,9 @@ import { catchError, retry } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Access-Control-Allow-Origin': '*'
+    'Access-Control-Allow-Origin': '*',
+    'Authorization': 'Basic Ym5lbzk5OmNoaWNrZW4='
+    //hardcode the username and password for now
   })
 };
 
@@ -16,8 +18,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UserService {
-
-  getAllUrl: string = 'http://127.0.0.1:3000/users/all';
+  //temp 
+  getAllUrl: string = 'http://192.168.0.100:3000/users/all';
 
   constructor(private http: HttpClient) { }
 
