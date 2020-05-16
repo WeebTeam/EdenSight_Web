@@ -1,8 +1,13 @@
-body, .container{
+html{
+	height: 100%;
+}
+
+.container{
 	height: 100vh;
 }
 
 body{
 	background-color: #bfefaf;
-	background-image: url(../assets/bg.gif)
+	background-image: url(../assets/bg.gif);
+	min-height: 100%;
 }

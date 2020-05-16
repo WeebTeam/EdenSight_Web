@@ -8,13 +8,15 @@ import { UsersComponent } from './users/users.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StaffComponent } from './staff/staff.component';
 import { LoginComponent } from './login/login.component';
+import { ResidentComponent } from './resident/resident.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     StaffComponent,
-    LoginComponent
+    LoginComponent,
+    ResidentComponent
   ],
   imports: [
     BrowserModule,

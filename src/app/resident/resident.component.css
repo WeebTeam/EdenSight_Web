@@ -1,0 +1,19 @@
+nav img{
+	width: 100px;
+	margin: 20px 0;
+}
+
+.basicInfo{
+	border-radius: 40px;
+	background-color: white;
+}
+
+.content{
+	background: white;
+	padding: 30px;
+	border-radius: .25rem;
+}
+
+.vital-signs{
+	height: 150px;
+}
