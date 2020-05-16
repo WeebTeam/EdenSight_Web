@@ -21,8 +21,6 @@ export class UsersComponent implements OnInit {
   showAll(): void {
     this.userService.getUsers()
     .subscribe(users => (this.users = users));
-    //console.log(this.users);
-    console.log('yoyoyoyo');
   }
 
 }
