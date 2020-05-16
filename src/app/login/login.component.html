@@ -2,23 +2,23 @@
 	<div class="row col-md-12 my-auto backside">
 		<div class="col-md-6 logo">
 		</div>
-
 		<div class="col-md-6 login">
 			<h1>Login</h1>
 			<div class="form">
-				<form>
-		      		<div class="form-group">
-		        		<label for="formGroupExampleInput">Username</label>
-		        		<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your username">
-		      		</div>
-		      		<div class="form-group">
-		        		<label for="formGroupExampleInput">Password</label>
-		        		<input type="password" class="form-control" id="formGroupExampleInput" placeholder="Your password">
-		      		</div>
-		      		<div class="text-center">
-		      			<button class="btn btn-primary" routerLink="/staff">Submit</button>
-		      		</div>
-		      	</form>
+				<form (ngSubmit)="login()" #loginForm="ngForm">
+					<div class="form-group">
+						<label for="loginUsername">Username</label>
+						<input type="text" class="form-control" id="loginUsername" [(ngModel)]="username" name="username" placeholder="Your username">
+					</div>
+					<div class="form-group">
+						<label for="loginPassword">Password</label>
+						<input type="password" class="form-control" id="loginPassword" [(ngModel)]="password" name="password" placeholder="Your password">
+					</div>
+					{{error}}
+					<div class="text-center">
+						<input type="submit" class="btn btn-primary" value="Submit">
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
