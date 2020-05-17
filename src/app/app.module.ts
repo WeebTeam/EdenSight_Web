@@ -15,6 +15,7 @@ import { ResidentComponent } from './resident/resident.component';
 
 //interceptors
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     UsersComponent,
     StaffComponent,
     LoginComponent,
-    ResidentComponent
+    ResidentComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

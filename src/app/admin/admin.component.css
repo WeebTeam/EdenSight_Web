@@ -1,0 +1,19 @@
+nav img{
+	width: 100px;
+	margin: 20px 0;
+}
+
+.buttons{
+	height: 75%;
+}
+
+.buttons div{
+	min-height: 100%;
+	margin: 1% 0;
+}
+
+.buttons button{
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+}
