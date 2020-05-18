@@ -17,6 +17,9 @@ import { ResidentComponent } from './resident/resident.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { AdminComponent } from './admin/admin.component';
 
+//pipe
+import { FilterPipe } from './filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { AdminComponent } from './admin/admin.component';
     StaffComponent,
     LoginComponent,
     ResidentComponent,
-    AdminComponent
+    AdminComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
