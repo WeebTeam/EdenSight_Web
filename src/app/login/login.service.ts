@@ -5,13 +5,15 @@ import { HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
+import { serverURL } from '../constants';
+
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
   //temp
-  loginUrl: string = 'http://192.168.0.100:3000/auth/login';
-
+  loginUrl: string = serverURL+'/auth/login';
+  
   authHeader: string;
 
   constructor(private http: HttpClient) { }
