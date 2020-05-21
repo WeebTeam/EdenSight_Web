@@ -7,6 +7,7 @@ import { ResidentComponent } from './resident/resident.component'
 import { AdminComponent } from './admin/admin.component'
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/login', pathMatch: 'full' }, //default route
   { path: 'login', component: LoginComponent },
   { path: 'users', component: UsersComponent },
   { path: 'resident', component: ResidentComponent },
