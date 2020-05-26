@@ -1,0 +1,78 @@
+<form action="">
+	<h1 class="display-4">New Staff</h1>
+	<h2 class="lead"><b>Login information</b></h2>
+	<div class="form-group">
+	    <label for="username">Username:</label>
+	    <input type="username" class="form-control" id="username">
+	</div>
+	<div class="form-group">
+	    <label for="email">Email:</label>
+	    <input type="email" class="form-control" id="email">
+	</div>
+	<div class="form-group">
+	    <label for="password">Password:</label>
+	    <input type="password" class="form-control" id="password">
+	</div>
+	<h2 class="lead"><b>Basic Information</b></h2>
+  	<div class="form-group">
+    	<label for="name">Name:</label>
+    	<input type="name" class="form-control" id="name" placeholder="Name">
+  	</div>
+  	<fieldset class="form-group">
+  		<legend class="col-form-label col-sm-2 pt-0">Gender:</legend>
+  		<div class="form-check form-check-inline">
+	    	<input class="form-check-input" type="radio" id="male" name="gender" value="male">
+		  	<label class="form-check-label" for="male">Male</label><br>
+		</div>
+		<div class="form-check form-check-inline">
+		  	<input class="form-check-input" type="radio" id="female" name="gender" value="female">
+		  	<label class="form-check-label" for="female">Female</label><br>
+		</div>
+		<div class="form-check form-check-inline">
+		 	<input class="form-check-input" type="radio" id="other" name="gender" value="other">
+		 	<label class="form-check-label" for="other">Other</label>
+	  	</div>
+  	</fieldset>
+  	<div class="form-group">
+	    <label for="dob">Date of birth:</label>
+	    <input type="date" class="form-control" id="dob">
+	</div>
+	<div class="form-group">
+	    <label for="roomNum">Staff Room Number:</label>
+	    <input type="text" class="form-control" id="roomNum" placeholder="R123">
+	</div>
+	<div class="form-group">
+    	<label for="inputAddress">Address:</label>
+    	<input type="text" class="form-control" id="inputAddress" placeholder="13 Lebuh Semangat">
+  	</div>
+  	<div class="form-group">
+    	<label for="inputAddress2">Address 2:</label>
+    	<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment">
+  	</div>
+	<div class="form-row">
+    	<div class="form-group col-md-6">
+      		<label for="inputCity">City:</label>
+      		<input type="text" class="form-control" id="inputCity">
+    	</div>
+    	<div class="form-group col-md-4">
+      		<label for="inputState">State:</label>
+      		<select id="inputState" class="form-control">
+        	<option selected>Choose...</option>
+       		<option>...</option>
+      	</select>
+    	</div>
+    	<div class="form-group col-md-2">
+      		<label for="inputZip">Zip:</label>
+      		<input type="text" class="form-control" id="inputZip">
+    	</div>
+  	</div>
+	<div class="form-group">
+	    <label for="allocationDate">Allocation Date:</label>
+	    <input type="date" class="form-control" id="allocationDate">
+	</div>
+	<div class="form-group">
+	    <label for="supervisor">Supervisor:</label>
+	    <input type="text" class="form-control" id="supervisor">
+	</div>
+	<button type="submit" class="btn btn-success">Submit</button>
+</form>

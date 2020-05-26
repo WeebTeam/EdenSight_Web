@@ -12,8 +12,6 @@ searchResident = searchResident.toLowerCase();
 
 return items.filter( it => {
       return it.name.toLowerCase().includes(searchResident) ||
-      it.status.toLowerCase().includes(searchResident) ||
-      it.caretaker.toLowerCase().includes(searchResident) ||
       it.room.toLowerCase().includes(searchResident);
     });
    }

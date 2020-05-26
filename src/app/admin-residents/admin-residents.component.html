@@ -11,7 +11,11 @@
 	    Full text search: <input [(ngModel)]="searchResident" class="form-control ml-2" type="text" />
 	</div>
 
-	<table class="table table-hover">
+	<div class="newResBtn">
+		<button class="btn btn-success" [routerLink]="['/new-resident']">Add New Resident</button>
+	</div>
+
+	<table class="table table-responsive-md table-hover">
 		<thead>
 			<tr class="thead-dark">
 			    <th scope="col">#</th>
@@ -19,15 +23,20 @@
 			    <th scope="col">Status</th>
 			    <th scope="col">Caretaker</th>
 			    <th scope="col">Room</th>
+			    <th scope="col"></th>
 		  	</tr>
 		</thead>
 		<tbody>
-		  	<tr *ngFor="let resident of residents | filter : searchResident; let i = index"  (click)="Try($event, resident)" [routerLink]="['/resident']">
-		  		<th scope="row">{{i+1}}</th>
+		  	<tr *ngFor="let resident of residents | filter : searchResident">
+		  		<th>{{resident.id}}</th>
 		    	<td>{{resident.name}}</td>
 		    	<td [ngClass]="resident.status == 'Healthy' ? 'green': 'red'">{{resident.status}}</td>
 		    	<td>{{resident.caretaker}}</td>
 		    	<td>{{resident.room}}</td>
+		    	<td class="tableBtn">
+		    		<button class="btn btn-info" (click)="edit(resident.id)">Edit</button>
+		    		<button class="btn btn-danger" (click)="delete()">Delete</button>
+		  		</td>
 		  	</tr>
 		</tbody>
 	</table>

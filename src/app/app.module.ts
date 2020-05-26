@@ -12,6 +12,8 @@ import { UsersComponent } from './users/users.component';
 import { StaffComponent } from './staff/staff.component';
 import { LoginComponent } from './login/login.component';
 import { ResidentComponent } from './resident/resident.component';
+import { AdminResidentsComponent } from './admin-residents/admin-residents.component';
+import { AdminStaffsComponent } from './admin-staffs/admin-staffs.component';
 
 //interceptors
 import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -19,6 +21,8 @@ import { AdminComponent } from './admin/admin.component';
 
 //pipe
 import { FilterPipe } from './filter.pipe';
+import { NewResidentComponent } from './new-resident/new-resident.component';
+import { NewStaffComponent } from './new-staff/new-staff.component';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { FilterPipe } from './filter.pipe';
     LoginComponent,
     ResidentComponent,
     AdminComponent,
-    FilterPipe
+    FilterPipe,
+    AdminResidentsComponent,
+    AdminStaffsComponent,
+    NewResidentComponent,
+    NewStaffComponent
   ],
   imports: [
     BrowserModule,

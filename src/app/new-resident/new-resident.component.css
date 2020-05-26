@@ -1,0 +1,18 @@
+form{
+	margin: 5%;
+	padding: 3%;
+	border-radius: 0.5rem;
+	background-color: white;
+}
+
+legend{
+	padding-left: 0;
+}
+
+.lead{
+	font-size: 28px;
+}
+
+label{
+	font-style: italic;
+}
