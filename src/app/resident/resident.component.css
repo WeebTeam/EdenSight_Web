@@ -21,3 +21,15 @@ nav img{
 .residentDetails img{
 	width: 100%;
 }
+
+.green{
+	background-color: rgba(195, 230, 203, 0.5);
+	color: green;
+	font-weight: bold;
+}
+
+.red{
+	background-color: rgba(237, 150, 158, 0.5);
+	color: #8B0000;
+	font-weight: bold;
+}

@@ -5,7 +5,6 @@
 	</div>
 </nav>
 
-
 <div class="card mb-3 residentDetails">
   <div class="row no-gutters">
     <div class="col-md-4">
@@ -18,19 +17,23 @@
 			  	<tbody>
 				  	<tr>
 				  		<th scope="row">Name</th>
-				    	<td class="text-center">asdf</td>
+				    	<td class="text-center">{{resident.name}}</td>
 				  	</tr>
 				  	<tr>
 				  		<th scope="row">Status</th>
-				    	<td class="table-success text-center" style="color: rgb(0, 51, 0);"><b>Healthy</b></td>
+				    	<td class="table-success text-center" [ngClass]="resident.status == 'Healthy' ? 'green': 'red'"><b>{{resident.status}}</b></td>
 				  	</tr>
 				  	<tr>
 				  		<th scope="row">Room</th>
-				    	<td class="text-center">R123</td>
+				    	<td class="text-center">{{resident.room}}</td>
 				  	</tr>
 				  	<tr>
 				  		<th scope="row">Phone Number</th>
-				    	<td class="text-center">020123123123</td>
+				    	<td class="text-center">{{resident.pNum}}</td>
+				  	</tr>
+				  	<tr>
+				  		<th scope="row">Caretaker</th>
+				    	<td class="text-center">{{resident.caretaker}}</td>
 				  	</tr>
 			  	</tbody>
 			</table>
@@ -47,10 +50,10 @@
 	    	<div class="row">
 	        <div class="col-md-5">
 	        	<div class="row">
-	        		<div class="col-md-6 vital-signs">Vital Sign One</div>
-		        	<div class="col-md-6 vital-signs">Vital Sign Two</div>
-		        	<div class="col-md-6 vital-signs">Vital Sign Three</div>
-		        	<div class="col-md-6 vital-signs">Vital Sign Four</div>
+	        		<div class="col-md-6 vital-signs">Vital Sign One <br> {{resident.vitalSigns[0].vs1}}</div>
+		        	<div class="col-md-6 vital-signs">Vital Sign Two <br> {{resident.vitalSigns[0].vs2}}</div>
+		        	<div class="col-md-6 vital-signs">Vital Sign Three <br> {{resident.vitalSigns[0].vs3}}</div>
+		        	<div class="col-md-6 vital-signs">Vital Sign Four <br> {{resident.vitalSigns[0].vs4}}</div>
 	        	</div>
 	        </div>
 	        <div class="col-md-7 col-sm-12">
@@ -66,18 +69,15 @@
 				<thead>
 					<tr>
 					    <th scope="col">#</th>
-					    <th scope="col">Resident Name</th>
-					    <th scope="col">Status</th>
-					    <th scope="col">Smtg</th>
+					    <th scope="col">Date</th>
+					    <th scope="col"></th>
 				  	</tr>
 				  	</thead>
 				  	<tbody>
-				  	<tr>
-				  		<th scope="row"></th>
-				    	<td>
-				    	</td>
-				    	<td></td>
-				    	<td></td>
+				  	<tr *ngFor="let vs of vitalSigns; let i = index">
+				  		<th>{{i+1}}</th>
+				    	<td>{{vs.date}}</td>
+				    	<td><button class="btn btn-info" (click)="ShowMore($event, vs, content)">Show More</button></td>
 				  	</tr>
 				  </tbody>
 			</table>
@@ -88,3 +88,21 @@
 	<div [ngbNavOutlet]="nav" class="content"></div>
 
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Vital Signs ({{date}})</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{vs1}}</p>
+    <p>{{vs2}}</p>
+    <p>{{vs3}}</p>
+    <p>{{vs4}}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

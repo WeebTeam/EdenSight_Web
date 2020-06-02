@@ -22,7 +22,8 @@
 		  	</tr>
 		</thead>
 		<tbody>
-		  	<tr *ngFor="let resident of residents | filter : searchResident; let i = index"  (click)="Try($event, resident)" [routerLink]="['/resident']">
+		  	<tr *ngFor="let resident of residents | filter : searchResident; let i = index" [routerLink]="['/resident']" 
+		  	[state]="{ data: resident}">
 		  		<th scope="row">{{i+1}}</th>
 		    	<td>{{resident.name}}</td>
 		    	<td [ngClass]="resident.status == 'Healthy' ? 'green': 'red'">{{resident.status}}</td>
