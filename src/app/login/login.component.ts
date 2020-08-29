@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //check credentials and login
   login() {
     this.loginService.login(this.username, this.password)
     .subscribe(

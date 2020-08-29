@@ -11,31 +11,24 @@ import { serverURL } from '../constants';
   providedIn: 'root'
 })
 export class LoginService {
-  //temp
+  //temp?
   loginUrl: string = serverURL+'/auth/login';
-  
+
   authHeader: string;
 
   constructor(private http: HttpClient) { }
 
-  // save the
+  //check the credentials against the server,
+  //if it is valid, save to localstorage and move to admin/staff page
   login(username:string, password:string): Observable<string> {
     //encode the username:password and save to localstorage
     localStorage.setItem('basic_credentials', btoa(username + ':' + password));
 
     return this.http.post<string>(this.loginUrl, '');
   }
-
-  // tries to access a resource on server to get user type
-  // if credentials is valid server will return 200 with current user data
-  // this lets us know what user it is and what routes(pages) to show
-  checkCredentials(username:string, password:string): Observable<any> {
-    //wip?
-    return this.http.post<string>(this.loginUrl, '');
-  }
-
+  
   public getCredentials(): string {
-    //ger credentials from localstorage
+    //get credentials from localstorage
     return localStorage.getItem('basic_credentials');
   }
 
